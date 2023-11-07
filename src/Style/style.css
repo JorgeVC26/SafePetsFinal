@@ -591,60 +591,7 @@ body .modal {
     box-shadow: -1px 1px 6px 1px #1a1a18;
 }
 
-.seccionImagen {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
 
-.seccionImagen img {
-  width: 100%;
-  max-width: 100%;
-  height: 70rem;
-  display: block;
-  position: relative;
-  filter: brightness(0.5); /* Ajusta el valor para cambiar la intensidad de la oscuridad */
-}
-
-.seccionImagen::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Cambia el valor alpha para ajustar la opacidad */
-  pointer-events: none;
-}
-
-.seccionImagen p {
-  font-size: 24px; /* Ajusta el tamaño de la fuente según tus preferencias */
-  color: #fff; /* Color del texto */
-  text-align: center; /* Alineación del texto al centro */
-}
-
-.btn-registrarse {
-  background-color: var(--celeste); /* Color de fondo */
-  color: #fff; /* Color del texto */
-  font-size: 24px; /* Tamaño de fuente mayor */
-  padding: 15px 30px; /* Espaciado interno mayor (arriba y abajo, izquierda y derecha) */
-  border: none; /* Elimina el borde */
-  border-radius: 10px; /* Borde redondeado */
-  cursor: pointer; /* Cambia el cursor al pasar por encima del botón */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-  text-decoration: none;
-  display: inline-block; /* Hace que el botón se comporte como un bloque en línea */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega una sombra sutil */
-  font-weight: bold; /* Hace que el texto sea más audaz */
-  text-transform: uppercase; /* Convierte el texto en mayúsculas */
-  letter-spacing: 1px; /* Aumenta el espaciado entre letras */
-}
-
-.btn-registrarse:hover {
-  background-color: #2d96db; /* Cambia el color de fondo al pasar el cursor */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al pasar el cursor */
-  transform: scale(1.05); /* Escala ligeramente el botón al pasar el cursor */
-}
 
 .top-section {
   background-color: #fcfcfc;

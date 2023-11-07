@@ -4,10 +4,11 @@ import Usuarios from './img/Users.png'
 import Resena from './img/resenas.png'
 import ImgServicios from './img/servicios.png'
 import Historia from './img/historia.png'
-import Colaboradores from './img/colaboradores.jpg'
 import InfoPrincipal from "./InfoPrincipal";
-
+import InformacionRegistro from "./InfoRegistro/InformacionRegistro";
+import Contacto from "./Contacto/Contacto";
 import Footer from "./footer/footer"
+
 
 
 
@@ -106,21 +107,9 @@ function Home() {
       </div>
 
 
-      <div className="seccionImagen" style={{ position: 'relative', width: '100%', overflow: 'hidden' }}>
-  <img
-    src={Colaboradores}
-    alt="Descripción de la imagen"
-    style={{ width: '100%', maxWidth: '100%', height: '70rem', display: 'block' }}
-  />
-    <p style={{ position: 'absolute', top: '60%', left: '50%', transform: 'translateX(-50%)', zIndex: 1, color: '#fff' }}>
-    Si quieres ser parte de la gran familia ded SafePets y ofrecer tus servicios a tu comunidad. Regístrate ahora y comienza a.
-  </p>
+<InformacionRegistro />
 
-  <Link className="btn-registrarse" to="/register" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1 }}>
-    Registrarse
-  </Link>
-
-</div>
+<Contacto />
 
 
 <Footer />

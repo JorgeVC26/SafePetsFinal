@@ -97,10 +97,13 @@ function ListarServicios() {
       <Link className="back-button" to="/">Regresar</Link>
       <table className="styled-table">
         <thead>
+
+        {/*Agregue Servicio - Jorge  */}
           <tr>
-            <th>Nombre</th>
-            <th>Precio</th>
+            <th>Nombre Colaborador</th>
+            <th>Precio Servicio</th>
             <th>Estado</th>
+            <th>Categoría Servicio</th> 
             <th>Usuario Activo</th>
             <th>Acciones</th>
           </tr>
@@ -111,6 +114,7 @@ function ListarServicios() {
               <td>{servicio.nombre}</td>
               <td>{servicio.precio}</td>
               <td>{servicio.estado}</td>
+              <td>{servicio.categoria}</td>
               <td>{servicio.usuarioActivoName}</td>
               <td className='actions'>
                 <button
