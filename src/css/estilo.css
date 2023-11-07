@@ -1,0 +1,66 @@
+
+  
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .navbar li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+
+  /* En el archivo estilo.css */
+/* Estilos generales */
+/* ... */
+
+/* Estilos específicos para el sidebar */
+aside {
+  background-color: var(--crema);
+  /* Color de fondo azul oscuro */
+    color: white;
+    width: 150px;
+    padding: 20px;
+    min-height: 600px;
+    max-height: max-content;
+  }
+.logo_sidebar{
+    background-color: #2980b9; /* Color de fondo azul oscuro */
+    color: white;
+    width: 200px;
+    padding: 20px;
+    min-height: 600px;
+}
+  
+  aside ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  aside li {
+    margin-bottom: 10px;
+  }
+  
+  aside a {
+    color: white;
+    background-color: rgb(4, 158, 189);
+    padding: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+  }
+  
+  aside a:hover {
+    text-decoration: underline;
+  }
+  

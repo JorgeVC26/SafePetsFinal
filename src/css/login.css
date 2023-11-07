@@ -1,0 +1,89 @@
+.navbarHome {
+  background-color: var(--crema);
+  padding: 3rem;
+    }
+
+.auth-card {
+    width: 300px;
+    margin: 100px auto; /* Centra horizontalmente */
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .auth-card h2 {
+    color: #333; /* Color del título */
+  }
+  
+  .auth-card input, .auth-card select  {
+    width: 92%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .auth-card button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db; /* Color de fondo azul */
+    border: none;
+    border-radius: 5px;
+    color: #fff; /* Color del texto */
+    cursor: pointer;
+    margin: 20px auto;
+  }
+  
+  .auth-card button:hover {
+    background-color: #2381c3; /* Color de fondo azul más oscuro al pasar el cursor */
+  }
+  
+  .auth-card p {
+    color: #ff0000; /* Color del mensaje de error */
+  }
+
+  .navbarHome ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .navbarHome li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  .navbarHome a {
+    padding: 3rem 0;
+    margin: 0;
+    color: var(--amarillo);
+    text-align: center;
+  
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .navbarHome a:hover {
+    text-decoration: underline;
+  }
+
+  /* Estilo.css */
+/* Estilo para el elemento select */
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  /* Estilo para las opciones en el select */
+  select option {
+    background-color: #fff;
+    color: #333;
+  }
+  

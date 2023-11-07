@@ -1,0 +1,833 @@
+/* Estilos generales para el select */
+select {
+    width: 200px; /* Ajusta el ancho según tus necesidades */
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos para el hover del select */
+  select:hover {
+    border-color: #555;
+    box-shadow: 0 0 5px --amarillo;
+  }
+  
+  /* Estilos para el foco del select */
+  select:focus {
+    outline: none;
+    border-color: --amarillo; 
+    box-shadow: 0 0 5px --amarillo;
+  }
+  
+  .contenedor {
+    width: 90%;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+.contenedor-presupuesto {
+    margin-top: -5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transform: translateY(5rem);
+}
+
+.contenedor-usuarios{
+  justify-content: space-between;
+}
+
+.btn-iniciar-sesion{
+  background-color: var(--amarillo);
+  padding: 8px;
+  margin-bottom: 20px;
+  margin-inline: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.btn-iniciar-sesion:hover{
+  background-color: rgb(212, 171, 8) ;
+}
+
+.contenedor-btns{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.gasto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.Titulos{
+  color: var(--amarillo);
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.contenido-gasto {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.margenHorizontal{
+  margin: 0 auto;
+}
+
+.contenido-URL {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.secciones-principales {
+margin: 30px;
+}
+
+.seccion{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.seccion:hover{
+  cursor: pointer;
+  background-color: #f1f1f1;
+}
+
+
+:root {
+  --azul: #3b82f6;
+  --blanco: #ffffff;
+  --gris-claro: #f5f5f5;
+  --gris: #94a3b8;
+  --gris-oscuro: #64748b;
+  --negro: #000;
+  --crema: #f9f3c8;
+  --amarillo: #e1c15f;
+  --celeste: #4db6fe;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Lato", sans-serif;
+  background-color: var(--gris-claro);
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.fijar {
+  overflow: hidden;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3rem;
+}
+
+.sombra {
+  box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
+  -webkit-box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
+  -moz-box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
+  background-color: var(--blanco);
+  padding: 4rem;
+  border-radius: 1.2rem;
+}
+
+header {
+  background-color: var(--crema);
+}
+
+/* TITULO */
+header h1 {
+  padding: 3rem 0;
+  margin: 0;
+  color: var(--amarillo);
+  text-align: center;
+
+  text-transform: uppercase;
+}
+
+header h1 span {
+  padding: 3rem 0;
+  margin: 0;
+  color: var(--celeste);
+  text-align: center;
+
+  text-transform: uppercase;
+}
+/* FIN TITULO */
+
+.formulario {
+  width: 95%;
+  margin: 0 auto;
+  padding: 10rem 0;
+}
+@media (min-width: 768px) {
+  .formulario {
+      padding: 5rem 0;
+      width: 60rem;
+  }
+}
+.formulario legend {
+  font-size: 3.6rem;
+  text-align: center;
+  display: block;
+  text-transform: uppercase;
+  color: var(--blanco);
+  margin-bottom: 4rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--azul);
+}
+.formulario .campo {
+  display: grid;
+  margin-bottom: 2rem;
+}
+
+.formulario label {
+  color: var(--azul);
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.formulario input[type="text"],
+.formulario input[type="number"] {
+  background-color: var(--gris-claro);
+  border-radius: 1rem;
+  padding: 1rem;
+  border: none;
+  flex: 1;
+  font-size: 1.6rem;
+}
+.formulario input[type="submit"] {
+  background-color: #1048a4;
+  border: none;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--blanco);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.9rem;
+  width: 100%;
+  transition: background-color 300ms ease;
+}
+@media (min-width: 768px) {
+  .formulario input[type="submit"] {
+      display: block;
+      padding: 1rem 5rem;
+  }
+}
+.formulario input[type="submit"]:hover {
+  background-color: #042a67;
+  cursor: pointer;
+}
+
+.formulario select {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  text-align: center;
+  background-color: var(--gris-claro);
+}
+
+.alerta {
+  padding: 2rem 5rem;
+  max-width: 60rem;
+  margin: 2rem auto 2rem auto;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  text-align: center;
+}
+.alerta.error {
+  background-color: var(--blanco);
+  border-left: 5px solid #b91c1c;
+  color: #b91c1c;
+}
+
+
+.contenedor {
+  width: 90%;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+.contenedor-presupuesto {
+  margin-top: -5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transform: translateY(5rem);
+}
+.dos-columnas {
+  flex-direction: column;
+}
+.dos-columnas :first-child {
+  margin-bottom: 4rem;
+}
+@media (min-width: 768px) {
+  .dos-columnas {
+      flex-direction: row;
+      align-items: center;
+      gap: 4rem;
+  }
+  .dos-columnas > div {
+      width: 50%;
+  }
+  .dos-columnas :first-child {
+      margin-bottom: 0;
+  }
+}
+.formulario input[type="text"].nuevo-presupuesto, 
+.formulario input[type="number"].nuevo-presupuesto {
+  font-size: 2.8rem;
+  text-align: center;
+}
+
+.contenedor-presupuesto svg {
+  width: 25rem;
+}
+
+.contenido-presupuesto {
+  width: 100%;
+}
+.contenido-presupuesto p {
+  font-weight: 400;
+  color: var(--gris-oscuro);
+  font-size: 2.4rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .contenido-presupuesto p {
+      text-align: left;
+  }
+}
+.contenido-presupuesto p.negativo,
+.contenido-presupuesto p.negativo span {
+  color: #DC2626;
+}
+.contenido-presupuesto span {
+  font-weight: 900;
+  color: var(--azul);
+}
+.reset-app {
+  border: none;
+  background-color: #db2777;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  color: var(--blanco);
+  text-transform: uppercase;
+  font-weight: 900;
+  border-radius: 1rem;
+  transition-property: background-color;
+  transition-duration: 300ms;
+}
+.reset-app:hover {
+  background-color: #c71465;
+  cursor: pointer;
+}
+
+main {
+  padding-top: 10rem;
+}
+
+.filtros .campo {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.filtros label {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--gris-oscuro);
+}
+.filtros select {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  text-align: center;
+  background-color: var(--gris-claro);
+}
+
+.listado-gastos {
+  margin-top: 5rem;
+}
+.listado-gastos h2 {
+  color: var(--gris-oscuro);
+  font-weight: 900;
+}
+.no-gastos {
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+.gasto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.cantidad-gasto {
+  font-size: 2.4rem;
+  color: var(--negro);
+  font-weight: 900;
+}
+
+.contenido-gasto {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contenido-gasto img {
+  width: 10rem;
+}
+
+.descripcion-gasto p {
+  margin: 0 0 0.3rem 0;
+}
+.descripcion-gasto .categoria {
+  color: var(--gris);
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.descripcion-gasto p {
+  margin-bottom: 1rem;
+}
+.descripcion-gasto .nombre-gasto {
+  color: var(--gris-oscuro);
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.descripcion-gasto .nombre-gasto:hover {
+  cursor: pointer;
+}
+.descripcion-gasto .fecha-gasto {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--gris-oscuro);
+}
+.descripcion-gasto .fecha-gasto span {
+  font-weight: 400;
+}
+
+.nuevo-gasto {
+  position: fixed;
+  bottom: 5rem;
+  right: 5rem;
+}
+
+.nuevo-gasto img {
+  width: 5rem;
+}
+.nuevo-gasto img:hover {
+  cursor: pointer;
+}
+
+.modal {
+  position: absolute;
+  background-color: rgb(0 0 0 / 0.78);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.modal .cerrar-modal {
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+  width: 3rem;
+  height: 3rem;
+}
+.modal .cerrar-modal img {
+  width: 100%;
+}
+
+.cerrar-modal :hover{
+  cursor: pointer;
+}
+
+.modal .formulario {
+  max-width: 80rem;
+  width: 40rem;
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in;
+  opacity: 0;
+  background-color:  rgb(0 0 0 / 0.3);
+  padding:  20px;
+  margin-top: 150px; 
+  border-radius: 3rem;
+}
+.modal label {
+  color: var(--blanco);
+}
+body .modal {
+  overflow: hidden;
+}
+
+.modal .formulario.animar {
+  position: relative;
+  opacity: 1;
+}
+
+.modal .formulario.cerrar {
+  opacity: 0;
+}
+
+.modal label {
+  text-align: left;
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+  font-size: 1rem !important;
+}
+
+/*** SWIPE LIST OVERRIDES **/
+.swipe-action__leading {
+  background-color: var(--azul);
+  color: var(--blanco);
+  margin-bottom: 2rem;
+}
+
+.swipe-action__trailing {
+  background-color: #db2730;
+  margin-bottom: 2rem;
+  color: var(--blanco);
+}
+
+.swipeable-list .swipe-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.4rem;
+  text-align: right;
+}
+.calificar{
+  border: 1px solid #4671c6;
+    background: #4671c6;
+    color: white !important;
+    border-radius: 5px;
+    box-shadow: 0px 1px 9px 1px #64748b;
+}
+.modal_Calificacion{
+  top: 25%;
+  left: 25%;
+  position: absolute;
+  width: 50%;
+  height: 60%;
+  border-radius: 10px;
+}
+.modal_Calificacion .campo{
+  display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.modal_Calificacion .campo h2{
+  color: #ffffff;
+}
+.modal_Calificacion .campo input,
+.modal_Calificacion .campo label,
+.modal_Calificacion .campo button{
+  margin: 5px 0px;
+  padding: 5px;
+  text-align: center;
+  font-size: 16px;
+  width: 40%;
+}
+.btn_cancelar{
+  background: #bf0d0d;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    box-shadow: -1px 1px 6px 1px #1a1a18;
+}
+.btn_calificar{
+  background: #098f1f;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    box-shadow: -1px 1px 6px 1px #1a1a18;
+}
+
+.seccionImagen {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.seccionImagen img {
+  width: 100%;
+  max-width: 100%;
+  height: 70rem;
+  display: block;
+  position: relative;
+  filter: brightness(0.5); /* Ajusta el valor para cambiar la intensidad de la oscuridad */
+}
+
+.seccionImagen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Cambia el valor alpha para ajustar la opacidad */
+  pointer-events: none;
+}
+
+.seccionImagen p {
+  font-size: 24px; /* Ajusta el tamaño de la fuente según tus preferencias */
+  color: #fff; /* Color del texto */
+  text-align: center; /* Alineación del texto al centro */
+}
+
+.btn-registrarse {
+  background-color: var(--celeste); /* Color de fondo */
+  color: #fff; /* Color del texto */
+  font-size: 24px; /* Tamaño de fuente mayor */
+  padding: 15px 30px; /* Espaciado interno mayor (arriba y abajo, izquierda y derecha) */
+  border: none; /* Elimina el borde */
+  border-radius: 10px; /* Borde redondeado */
+  cursor: pointer; /* Cambia el cursor al pasar por encima del botón */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  display: inline-block; /* Hace que el botón se comporte como un bloque en línea */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega una sombra sutil */
+  font-weight: bold; /* Hace que el texto sea más audaz */
+  text-transform: uppercase; /* Convierte el texto en mayúsculas */
+  letter-spacing: 1px; /* Aumenta el espaciado entre letras */
+}
+
+.btn-registrarse:hover {
+  background-color: #2d96db; /* Cambia el color de fondo al pasar el cursor */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al pasar el cursor */
+  transform: scale(1.05); /* Escala ligeramente el botón al pasar el cursor */
+}
+
+.top-section {
+  background-color: #fcfcfc;
+  margin: 2rem;
+  border-radius: 5px;
+}
+
+.top-section img {
+  border-radius: 10px;
+}
+
+.image-container {
+  margin: 5rem;
+}
+
+.text-container {
+  display: flex;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.boton-historia {
+  background-color: var(--celeste); /* Color de fondo */
+  color: #fff; /* Color del texto */
+  font-size: 24px; /* Tamaño de fuente mayor */
+  padding: 15px 30px; /* Espaciado interno mayor (arriba y abajo, izquierda y derecha) */
+  border: none; /* Elimina el borde */
+  border-radius: 10px; /* Borde redondeado */
+  cursor: pointer; /* Cambia el cursor al pasar por encima del botón */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  display: inline-block; /* Hace que el botón se comporte como un bloque en línea */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega una sombra sutil */
+  font-weight: bold; /* Hace que el texto sea más audaz */
+  text-transform: uppercase; /* Convierte el texto en mayúsculas */
+  letter-spacing: 1px; /* Aumenta el espaciado entre letras */
+}
+
+.boton-historia:hover {
+  background-color: #2d96db; /* Cambia el color de fondo al pasar el cursor */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al pasar el cursor */
+  transform: scale(1.05); /* Escala ligeramente el botón al pasar el cursor */
+}
+
+
+
+
+/* Estilo para el contenedor principal */
+div {
+  text-align: center;
+}
+.formRegister {
+  max-width: 400px; /* Aumenta el ancho máximo del formulario */
+  margin: 0 auto;
+  padding: 30px; /* Incrementa el espacio interno del formulario */
+  background-color: #ffffff; /* Cambia el color de fondo a blanco */
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Aumenta el radio de las esquinas */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Aumenta el efecto de sombra */
+  margin-top: 10rem; /* Ajusta la distancia desde la parte superior */
+}
+
+/* Estilo para el encabezado del formulario */
+.formRegister h2 {
+  color: #5cb6fd; /* Cambia el color del título */
+  font-size: 24px; /* Aumenta el tamaño del título */
+  margin-bottom: 20px;
+}
+
+/* Estilo para los campos de entrada de texto */
+.formRegister input[type="text"],
+.formRegister input[type="email"],
+.formRegister input[type="password"],
+.formRegister select {
+  width: 100%;
+  padding: 12px; /* Aumenta el espacio interno */
+  margin-bottom: 20px; /* Aumenta el espacio entre campos */
+  border: 2px solid #5cb6fd; /* Cambia el borde a azul */
+  border-radius: 5px;
+  font-size: 16px; /* Aumenta el tamaño de la fuente */
+}
+
+/* Estilo para el botón de registro */
+.formRegister button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 24px; /* Aumenta el espacio alrededor del botón */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px; /* Aumenta el tamaño de la fuente del botón */
+}
+
+/* Estilo para etiquetas de selección */
+.formRegister select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+}
+
+/* Estilo para etiquetas de campo */
+.formRegister label {
+  display: block;
+  margin-bottom: 10px; /* Ajusta el espacio entre etiquetas y campos */
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Estilo para casillas de verificación */
+.formRegister input[type="checkbox"] {
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+/* Estilo para mensajes de error */
+.formRegister .error-message {
+  color: #ff0000;
+  margin-top: 10px; /* Ajusta el espacio entre el mensaje de error y el campo */
+  font-size: 14px; /* Aumenta el tamaño de la fuente del mensaje de error */
+}
+
+/* Estilo para mensajes de confirmación */
+.formRegister .confirmation-message {
+  color: #008000;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+
+/* Estilo para el contenedor del formulario de inicio de sesión */
+.FormLogin {
+  max-width: 400px; /* Aumenta el ancho máximo del formulario */
+  margin: 0 auto;
+  padding: 30px; /* Incrementa el espacio interno del formulario */
+  background-color: #ffffff; /* Cambia el color de fondo a blanco */
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Aumenta el radio de las esquinas */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Aumenta el efecto de sombra */
+  margin-top: 10rem; /* Ajusta la distancia desde la parte superior */
+}
+
+/* Estilo para el título del formulario de inicio de sesión */
+.FormLogin h2 {
+  color: #5cb6fd; /* Cambia el color del título */
+  font-size: 24px; /* Aumenta el tamaño del título */
+  margin-bottom: 20px;
+}
+
+/* Estilo para los campos de entrada de texto del formulario de inicio de sesión */
+.FormLogin input[type="email"],
+.FormLogin input[type="password"] {
+  width: 100%;
+  padding: 12px; /* Aumenta el espacio interno */
+  margin-bottom: 20px; /* Aumenta el espacio entre campos */
+  border: 2px solid #5cb6fd; /* Cambia el borde a azul */
+  border-radius: 5px;
+  font-size: 16px; /* Aumenta el tamaño de la fuente */
+}
+
+/* Estilo para el botón de inicio de sesión del formulario de inicio de sesión */
+.FormLogin button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 24px; /* Aumenta el espacio alrededor del botón */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px; /* Aumenta el tamaño de la fuente del botón */
+}
+
+/* Estilo para mensajes de error del formulario de inicio de sesión */
+.FormLogin p {
+  color: #ff0000;
+  margin-top: 10px; /* Ajusta el espacio entre el mensaje de error y el campo */
+  font-size: 14px; /* Aumenta el tamaño de la fuente del mensaje de error */
+}
+
+.FormLogin .error-message {
+  background-color: #ffdddd; /* Fondo rojo claro para resaltar el mensaje de error */
+  color: #ff0000; /* Texto en rojo oscuro */
+  padding: 10px; /* Espaciado interno para mayor claridad */
+  border: 1px solid #ff0000; /* Borde rojo alrededor del mensaje de error */
+  border-radius: 5px; /* Bordes redondeados */
+  margin-top: 10px; /* Espacio superior desde el campo */
+  font-size: 16px; /* Tamaño de fuente ligeramente mayor */
+}

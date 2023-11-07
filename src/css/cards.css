@@ -1,0 +1,172 @@
+.container{
+    width: 80%;
+    position: absolute;
+    top: 80px;
+    left: 200px;
+    margin: 20px;
+}
+.container_add{
+    display: flex;
+    text-align: center;
+    width: 80%;
+    position: absolute;
+    top: 80px;
+    left: 200px;
+    margin: 20px;
+    justify-content: center;
+}
+/* Estilo para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Estilo para las filas impares (color blanco) */
+  table tr:nth-child(odd) {
+    background-color: #fff;
+  }
+  
+  /* Estilo para las filas pares (color gris claro) */
+  table tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+  
+  /* Estilo para el encabezado (color azul) */
+  table th {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  /* Estilo para las celdas (añade espaciado y borde) */
+  table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Estilo para botones en las celdas */
+  table td button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  /* Estilo para el botón "Agregar Usuario" (verde claro) */
+.green-button {
+    margin: 10px;
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .back-button {
+    margin: 10px;
+    background-color: #dd381b;
+    color: #fff;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  /* Estilo para el botón "Editar" (azul) */
+  .blue-button {
+    margin: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .red-button {
+    margin: 10px;
+    background-color: #e60606;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .actions{
+    display: flex;
+    justify-content: center;
+  }
+  .card {
+    width: 400px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .card-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .card-header h2 {
+    color: #333;
+  }
+  
+  .card-content label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .card-content input,
+  .card-content select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .green-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .green-button:hover {
+    background-color: #45a049;
+  }
+
+  .container_back{
+      display: flex;
+      justify-content: space-between;
+      margin: 100px;
+      width: 1623px;
+      overflow: hidden;
+      flex-direction: column;
+  }
+  .container_back div{
+    height: 100px;
+  }
+  .container_back div a{
+    border: 1px solid #d1d1d1;
+    padding: 10px 40px;
+    border-radius: 20px;
+    text-decoration: none;
+    background: #00b8b9;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    box-shadow: 0px 1px 2px 1px #d3d2d2;
+  }
