@@ -7,6 +7,8 @@ import Historia from './img/historia.png'
 import Colaboradores from './img/colaboradores.jpg'
 import InfoPrincipal from "./InfoPrincipal";
 
+import Footer from "./footer/footer"
+
 
 
 function Home() {
@@ -121,6 +123,7 @@ function Home() {
 </div>
 
 
+<Footer />
 
     </div>
   );
