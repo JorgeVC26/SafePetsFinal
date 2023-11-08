@@ -212,20 +212,6 @@ header h1 span {
   margin-bottom: 2rem;
 }
 
-.mensajeServicio {
-  background-color: var(--gris-claro) !important;
-  border-radius: 3rem !important;
-  color: var(--amarillo) !important;
-  font-size: 2.8rem !important;
-  text-align: center !important;
-  margin-bottom: 2rem !important;
-  text-decoration: none !important;
-  font-weight: 900 !important;
-}
-
-
-
-
 .formulario label {
   color: var(--azul);
   font-size: 2.8rem;
