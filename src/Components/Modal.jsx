@@ -58,6 +58,8 @@ const Modal = ({
 
         //FALTA TELEFONO
         guardarServicio({nombre, precio, ubicacion, categoria, id, fecha, estado, usuarioActivoName})
+
+        
     }
 
   return (
