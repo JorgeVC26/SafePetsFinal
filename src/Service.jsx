@@ -6,11 +6,14 @@ import ListadoServicios from './Components/ListadoServicios';
 import { generarId } from './Components/helpers';
 import IconoNuevoServicio from './img/nuevo-gasto.svg';
 import ControlServicios from './Components/ControlServicios';
+import MsjServicio from './MsjServicio'; // Importa el componente MsjServicio
+
 import './Style/style.css';
 import './App.css';
 
 function Service() {
   const authToken = localStorage.getItem('authToken');
+  const [mensajeModalVisible, setMensajeModalVisible] = useState(false);
 
   const usuarioActivo = JSON.parse(localStorage.getItem('UsuarioActivo'));
   const rol = usuarioActivo ? usuarioActivo[0].role : null;
@@ -25,6 +28,7 @@ function Service() {
   const [servicioTemporal, setServiciosTemporales] = useState(
     JSON.parse(localStorage.getItem('serviciosTemporales')) || []
   );
+  const [mensajeDespuesDeCierre, setMensajeDespuesDeCierre] = useState('');
 
   const [servicioEditar, setServicioEditar] = useState({});
   const [filtro, setFiltro] = useState('');
@@ -108,7 +112,20 @@ const guardarServicio = (servicio) => {
   setAnimarModal(false);
   setTimeout(() => {
     setModal(false);
-  });
+    setMensajeDespuesDeCierre('Servicio enviado para su aprobación');
+// Muestra el mensaje modal
+setMensajeModalVisible(true);
+
+// Borra el mensaje después de 3 segundos (3000 ms)
+setTimeout(() => {
+  setMensajeDespuesDeCierre('');
+}, 3000);
+
+// Oculta el mensaje modal después de 3 segundos (3000 ms)
+setTimeout(() => {
+  setMensajeModalVisible(false);
+}, 3000);
+}, 500); // Muestra el mensaje después de cerrar el modal
 };
 useEffect(() => {
   localStorage.setItem('serviciosTemporales', JSON.stringify(servicioTemporal) ?? []);
@@ -122,6 +139,8 @@ useEffect(() => {
       <Header servicios={serviciosAprobados} />
       <ControlServicios cantidadServicios={serviciosAprobados.length} />
       <main>
+
+     
         <Filtro filtro={filtro} setFiltro={setFiltro} />
         <ListadoServicios
           servicios={serviciosAprobados}
@@ -131,6 +150,8 @@ useEffect(() => {
           filtro={filtro}
           serviciosFiltrados={serviciosFiltrados}
         />
+{mensajeModalVisible && <MsjServicio />}
+          
       </main>
       {authToken && (rol === 'superadmin' || rol === 'admin') && (
         <div className='nuevo-gasto'>

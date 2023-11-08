@@ -89,7 +89,7 @@ function CrearUsuario() {
             >
               <option value="superadmin">Super Admin</option>
               <option value="admin">Administrador</option>
-              <option value="usuario">Usuario</option>
+              {/* <option value="usuario">Usuario</option> */}
             </select>
 
             <button type="submit" className="green-button">Crear Usuario</button>
