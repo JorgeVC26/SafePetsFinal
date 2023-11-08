@@ -1,34 +1,3 @@
-.hero {
-  background: url('../img/bulldog.jpg')
-    no-repeat center/cover;
-  width: 100%;
-  height: 600px;
-
-  display: flex;
-}
-
-.contenedor-imagenes {
-  display: flex;
-}
-
-.imagen-izquierda {
-  background: url('../img/mision.jpg')
-  no-repeat right/cover;
-  flex: 1; /* Ocupa todo el espacio disponible a la izquierda */
-  margin-right: 0px; /* Agrega un margen a la derecha para separar las imágenes */
-  width: 100%;
-  height: 600px;
-}
-
-.imagen-derecha {
-  background: url('../img/vision.jpg')
-  no-repeat left/cover;
-  flex: 1; /* Ocupa todo el espacio disponible a la derecha */
-  margin-right: 0px; /* Agrega un margen a la derecha para separar las imágenes */
-  width: 100%;
-  height: 600px;
-}
-
 .container {
   display: flex;
   justify-content: space-between;
@@ -75,9 +44,8 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 90px;
-    justify-content: center;
-    width: 1600px;
+    padding: 20px;
+    text-align: left;
   }
 
   .card-content-right {
@@ -87,9 +55,9 @@
 }
   
   .card-text, .card-description {
-    font-size: 23px;
+    font-size: 18px;
     color: #666;
-    line-height: 2;
+    line-height: 1.7;
     text-align: center;
   }
   
@@ -146,20 +114,4 @@
   .slick-dots li.slick-active button {
     background-color: #007bff;
     border: 1px solid #007bff;
-  }
-
-  .imagen-con-texto {
-    position: relative; /* Contenedor relativo para el posicionamiento absoluto */
-    flex: 1;
-    margin: 0px;
-  }
-  
-  .texto {
-    position: absolute; /* Posicionamiento absoluto para el texto */
-    top: 50%; /* Centra verticalmente el texto */
-    left: 50%; /* Centra horizontalmente el texto */
-    transform: translate(-50%, -50%); /* Centra el texto correctamente */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para hacer el texto legible */
-    color: white; /* Color del texto */
-    padding: 10px; /* Espacio alrededor del texto */
   }
