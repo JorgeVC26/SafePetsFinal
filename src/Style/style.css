@@ -828,29 +828,3 @@ div {
   background-color: #ccc;
   color: #333;
 }
-
-
-.mensaje-servicio-agregado {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.mensaje-servicio-agregado.aparecer {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.mensaje-servicio-agregado.desaparecer {
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
