@@ -1,25 +1,30 @@
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import './Style/style.css';
-import Usuarios from './img/Users.png'
-import Resena from './img/resenas.png'
-import ImgServicios from './img/servicios.png'
-import Historia from './img/historia.png'
+import Usuarios from './img/Users.png';
+import Resena from './img/resenas.png';
+import ImgServicios from './img/servicios.png';
+import Historia from './img/historia.png';
 import InfoPrincipal from "./InfoPrincipal";
 import InformacionRegistro from "./InfoRegistro/InformacionRegistro";
 import Contacto from "./Contacto/Contacto";
-import Footer from "./footer/footer"
-
-
-
+import Footer from "./footer/footer";
+import MensajeLogout from "./MensajeLogout";
 
 function Home() {
-    
   const authToken = localStorage.getItem('authToken');
   const navigate = useNavigate();
   const usuarioActivo = JSON.parse(localStorage.getItem('users'));
   const rol = usuarioActivo ? usuarioActivo[0].role : null;
   const canViewAdmin = rol === 'superadmin' || rol === 'admin';
+
+  const [showLogoutConfirmation, setShowLogoutConfirmation] = useState(false);
+
   const handleLogout = () => {
+    setShowLogoutConfirmation(true);
+  };
+
+  const confirmLogout = () => {
     // Elimina el token del almacenamiento local
     localStorage.removeItem('authToken');
     localStorage.removeItem('rolActivo');
@@ -34,18 +39,14 @@ function Home() {
     <div>
       <header>
         <a className="titulo" href="/">
-        <h1>Safe<span>Pets</span></h1>
+          <h1>Safe<span>Pets</span></h1>
         </a>
         <ul>
           {!authToken && (
             <>
-            <div className="contenedor-btns">
-              
-                <Link className="btn-iniciar-sesion"  to="/login">Iniciar Sesión</Link>
-              
-            
+              <div className="contenedor-btns">
+                <Link className="btn-iniciar-sesion" to="/login">Iniciar Sesión</Link>
                 <Link className="btn-iniciar-sesion" to="/register">Registrarse</Link>
-              
               </div>
             </>
           )}
@@ -57,21 +58,18 @@ function Home() {
         </ul>
       </header>
 
-
-<InfoPrincipal />
-          
-
+      <InfoPrincipal />
 
       <div className="secciones-principales">
         <div style={{ display: 'flex' }}>
-        <div className='seccion card margenHorizontal' style={{ width: '18%', height: '40rem', justifyContent: 'center' }}>
-              <div className='contenido-gasto' style={{ flexDirection: 'column' }}>
-                <Link to="/serviciosDisponibles" className='Titulos contenido-URL' >Servicios Disponibles
-                  <img src={ImgServicios} alt="imagen de servicios" style={{ height: '100px' }} />
-                </Link>
-              </div>
+          <div className='seccion card margenHorizontal' style={{ width: '18%', height: '40rem', justifyContent: 'center' }}>
+            <div className='contenido-gasto' style={{ flexDirection: 'column' }}>
+              <Link to="/serviciosDisponibles" className='Titulos contenido-URL' >Servicios Disponibles
+                <img src={ImgServicios} alt="imagen de servicios" style={{ height: '100px' }} />
+              </Link>
             </div>
-        {authToken && canViewAdmin && (
+          </div>
+          {authToken && canViewAdmin && (
             <div className='seccion card margenHorizontal' style={{ width: '18%', height: '40rem', justifyContent: 'center' }}>
               <div className='contenido-gasto' style={{ flexDirection: 'column' }}>
                 <Link to="./Service" className='Titulos contenido-URL' >Servicios
@@ -79,7 +77,7 @@ function Home() {
                 </Link>
               </div>
             </div>
-        )}
+          )}
           {authToken && canViewAdmin && (
             <div className='seccion card margenHorizontal' style={{ width: '18%', height: '40rem', justifyContent: 'center' }}>
               <div className='contenido-gasto' style={{ flexDirection: 'column' }} >
@@ -106,13 +104,15 @@ function Home() {
         </div>
       </div>
 
+      <InformacionRegistro />
 
-<InformacionRegistro />
+      <Contacto />
 
-<Contacto />
+      <Footer />
 
-<Footer />
-
+      {showLogoutConfirmation && (
+        <MensajeLogout onConfirm={confirmLogout} onCancel={() => setShowLogoutConfirmation(false)} />
+      )}
     </div>
   );
 }
