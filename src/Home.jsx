@@ -58,6 +58,8 @@ function Home() {
         </ul>
       </header>
 
+      <div className="home__s"></div>
+      
       <InfoPrincipal />
 
       <div className="secciones-principales">

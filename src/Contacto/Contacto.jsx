@@ -14,9 +14,11 @@ const Contacto = () => {
     };
   
     return (
-        <div className="contacto-container">
-          <div className="contacto-info">
-            <h1>Formulario de Contacto</h1>
+        <div className="contacto__container">
+          <div className="contacto__info">
+          <div className="linea__superior">
+                Formulario de Contacto
+           </div>
           </div>
           <div className="formulario-contacto">
             <form onSubmit={handleSubmit}>

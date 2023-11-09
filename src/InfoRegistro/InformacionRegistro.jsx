@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
-import Colaboradores from '../img/colaboradores.jpg';
+import Colaboradores from '../img/gente.jpg';
 import Prueba from '../img/duchaMasc.jpg';
 import './infoRegistro.css';
 
