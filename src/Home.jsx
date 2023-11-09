@@ -59,10 +59,6 @@ function Home() {
       </header>
 
       <InfoPrincipal />
-    
-
-<InfoPrincipal />
-          
 
       <div className="secciones-principales">
         <div style={{ display: 'flex' }}>
