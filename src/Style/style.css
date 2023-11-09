@@ -609,8 +609,8 @@ body .modal {
 
 .top-section {
   background-color: #fcfcfc;
-  margin: 2rem;
-  border-radius: 5px;
+  margin: 10rem;
+  border-radius: 10px;
 }
 
 .top-section img {
@@ -844,11 +844,34 @@ div {
 }
 
 .home__s {
-  background: url('../img/home.jpg')
-    no-repeat center/cover;
+  position: relative;
   width: 100%;
   height: 700px;
   flex: 1;
   display: flex;
+  border-radius: 0 0 200px 200px;
   overflow: hidden;
+}
+
+.home__s::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 300px; /* Ajusta la altura según sea necesario */
+  background-color: var(--celeste);
+  clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
+  
+}
+
+.home__s::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('../img/home.jpg') no-repeat center/cover;
+  z-index: -2;
 }
