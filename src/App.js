@@ -8,7 +8,7 @@ import CrearUsuario from './Components/Usuarios/CrearUsuario';
 import EditarUsuario from './Components/Usuarios/EditarUsuario';
 import Home from './Home';
 import Service from "./Service";
-import Historia from "./Historia";
+import Historia from "./Historia/Historia.jsx";
 import Informacion from "./Informacion";
 import MenuAdministrador from './Components/MenuAdministrador';
 import ListarSerivicios from './Components/Servicios/ListarServicios';

@@ -1,0 +1,46 @@
+.titulo {
+    text-align: center; /* Centra el título horizontalmente */
+    font-size: 24px; /* Tamaño de fuente para el título */
+    margin-top: 120px; /* Espacio entre el título y el contenedor */
+}
+
+.app-container {
+    text-align: center; /* Centra el contenido horizontalmente */
+  }
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px;
+    overflow-x: auto; /* Agregar barra de desplazamiento horizontal si los cards desbordan el contenedor */
+    margin-bottom: 60px;
+    margin-top: 50px;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    margin: 10px;
+    min-width: 300px; /* Establece un ancho mínimo para cada card */
+}
+
+/* Estilos específicos para cada card */
+.izquierda {
+    background-color: rgba(141, 49, 49, 0.5);
+}
+
+.centro {
+    background-color: rgba(93, 123, 115, 0.511);
+}
+
+.derecha {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.linea-superior {
+    border-bottom: 5px solid #1f80a9; /* Puedes ajustar el grosor y el color de la línea según tus preferencias */
+    display: inline; /* Para que la línea se ajuste al texto */
+  }
