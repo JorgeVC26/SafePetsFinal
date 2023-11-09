@@ -89,20 +89,7 @@ function Home() {
               </div>
             </div>
           )}
-          <div className='seccion card margenHorizontal' style={{ width: '18%', height: '40rem', justifyContent: 'center' }}>
-            <div className='contenido-gasto' style={{ flexDirection: 'column' }}>
-              <Link to="./Informacion" className='Titulos contenido-URL'>Información
-                <img src={Resena} alt="imagen de comentarios" style={{ height: '100px' }} />
-              </Link>
-            </div>
-          </div>
-          <div className='seccion card margenHorizontal' style={{ width: '18%', height: '40rem', justifyContent: 'center' }}>
-            <div className='contenido-gasto' style={{ flexDirection: 'column' }}>
-              <Link to="./Historia" className='Titulos contenido-URL'>Historia
-                <img src={Historia} alt="imagen de comentarios" style={{ height: '100px' }} />
-              </Link>
-            </div>
-          </div>
+         
         </div>
       </div>
 
