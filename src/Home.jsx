@@ -41,7 +41,6 @@ function Home() {
         <a className="titulo" href="/">
           <h1>Safe<span>Pets</span></h1>
         </a>
-        <ul>
           {!authToken && (
             <>
               <div className="contenedor-btns">
@@ -55,10 +54,15 @@ function Home() {
               <button className="logout-button" onClick={handleLogout}>Cerrar Sesión</button>
             </li>
           )}
-        </ul>
       </header>
 
-      <div className="home__s"></div>
+      <div className="home__s">
+      <div className="texto__s">
+        <h2>Encuentra cuidadores y paseadores de perros de confianza en tu ciudad.
+        Brinda a tus mascotas un cuidado amoroso reservando servicios con total tranquilidad.
+          </h2>
+        </div>
+      </div>
       
       <InfoPrincipal />
 
