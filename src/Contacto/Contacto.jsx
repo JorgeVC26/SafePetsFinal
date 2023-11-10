@@ -1,7 +1,11 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import './contacto.css'
 
+import emailjs from "@emailjs/browser"
+
 const Contacto = () => {
+    const refForm = useRef();
+    
     const [nombre, setNombre] = useState('');
     const [correo, setCorreo] = useState('');
     const [telefono, setTelefono] = useState('');
@@ -9,8 +13,23 @@ const Contacto = () => {
   
     const handleSubmit = (e) => {
       e.preventDefault();
+      console.log(refForm.current);
       // Aquí puedes realizar la lógica para enviar los datos del formulario, como una solicitud HTTP a un servidor o cualquier otra acción requerida.
       // Puedes acceder a los valores de nombre, correo, telefono y motivo utilizando las variables de estado correspondientes.
+    const serviceId = "service_157jmkn";
+    const templateId = "template_4e9od6d";
+
+    const apiKey = "oIEKB1nZ_-C3IEobH";
+
+    emailjs.sendForm(serviceId, templateId, refForm.current, apiKey)
+    .then( (result) => {
+        console.log (result.text);
+        setNombre('');
+        setCorreo('');
+        setTelefono('');
+        setMotivo('');
+    })
+    .catch(error => console.error(error))
     };
   
     return (
@@ -21,7 +40,7 @@ const Contacto = () => {
            </div>
           </div>
           <div className="formulario-contacto">
-            <form onSubmit={handleSubmit}>
+            <form ref={refForm} action='' onSubmit={handleSubmit}>
               <div className="campo">
                 <label htmlFor="nombre">Nombre Completo:</label>
                 <input
@@ -69,7 +88,7 @@ const Contacto = () => {
                 ></textarea>
               </div>
     
-              <button type="submit">Enviar</button>
+              <button className='btn__send'>Enviar</button>
             </form>
           </div>
         </div>

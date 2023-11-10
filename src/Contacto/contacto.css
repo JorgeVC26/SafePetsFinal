@@ -69,3 +69,14 @@
     border-bottom: 5px solid #1f80a9; /* Puedes ajustar el grosor y el color de la línea según tus preferencias */
     display: inline; /* Para que la línea se ajuste al texto */
   }
+
+  .btn__send{
+    width: 12rem;
+    background-color: #005aba;
+  }
+
+  .btn__send:hover,
+  .btn__send:focus{
+    background-color: #1184ff;
+    color: #ffffff;
+  }
