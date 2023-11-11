@@ -80,3 +80,12 @@
     background-color: #1184ff;
     color: #ffffff;
   }
+
+  .recaptcha {
+    margin-bottom: 20px;
+  }
+
+  .error-captcha{
+    color: red;
+    margin-bottom: 20px;
+  }

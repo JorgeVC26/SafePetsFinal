@@ -3,7 +3,11 @@ import './contacto.css'
 
 import emailjs from "@emailjs/browser"
 
+import ReCAPTCHA from "react-google-recaptcha";
+
 const Contacto = () => {
+    const [captchaValido, cambiarCaptchaValido] = useState(null);
+    const [usuarioValido, cambiarUsuarioValido] = useState(false);
     const refForm = useRef();
     
     const [nombre, setNombre] = useState('');
@@ -16,6 +20,17 @@ const Contacto = () => {
       console.log(refForm.current);
       // Aquí puedes realizar la lógica para enviar los datos del formulario, como una solicitud HTTP a un servidor o cualquier otra acción requerida.
       // Puedes acceder a los valores de nombre, correo, telefono y motivo utilizando las variables de estado correspondientes.
+   
+      if(captcha.current.getValue()){
+        console.log('El usuario no es un robot');
+        cambiarUsuarioValido(true);
+        cambiarCaptchaValido(true)
+      } else {
+        console.log('Por favor acepta el captcha');
+        cambiarUsuarioValido(false);
+        cambiarCaptchaValido(false)
+      }
+   
     const serviceId = "service_157jmkn";
     const templateId = "template_4e9od6d";
 
@@ -30,8 +45,17 @@ const Contacto = () => {
         setMotivo('');
     })
     .catch(error => console.error(error))
+
     };
-  
+
+    const captcha = useRef(null);
+
+    const onChange = () => {
+      if(captcha.current.getValue()){
+        console.log('El usuario no es un robot')
+        cambiarCaptchaValido(true);
+    };
+  }
     return (
         <div className="contacto__container">
           <div className="contacto__info">
@@ -39,6 +63,7 @@ const Contacto = () => {
                 Formulario de Contacto
            </div>
           </div>
+          {!usuarioValido && 
           <div className="formulario-contacto">
             <form ref={refForm} action='' onSubmit={handleSubmit}>
               <div className="campo">
@@ -87,12 +112,24 @@ const Contacto = () => {
                   required
                 ></textarea>
               </div>
-    
+              <div className="recaptcha">
+              <ReCAPTCHA 
+              ref={captcha}
+              sitekey="6LeRZwspAAAAAFowRBpENYBi0WmY5BwIop8TB-nY" 
+              onChange={onChange}
+              />
+              </div>
+              {captchaValido === false && 
+                <div className='error-captcha'>Por favor acepta el captcha</div>
+}
               <button className='btn__send'>Enviar</button>
             </form>
           </div>
+          }
+          {!usuarioValido && 
+          <div></div>
+}
         </div>
   );
 };
-  
   export default Contacto;
