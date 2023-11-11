@@ -40,6 +40,13 @@ function ServiciosPublicos() {
     setModalVisible(true);
   };
 
+  const verDetalles = (servicio) => {
+    // Almacenar la información del servicio en localStorage
+    localStorage.setItem('detalleServicio', JSON.stringify(servicio));
+    // Redireccionar a la página de detalles
+    window.location.href = '/detalleServicio';
+  };
+
   // Función para cerrar el modal de calificación
   const cerrarModalCalificacion = () => {
     setServicioACalificar(null);
@@ -152,6 +159,10 @@ function ServiciosPublicos() {
             </div>
           </div>
           <p className='cantidad-gasto'>₡{servicio.precio}</p>
+
+          <button className="ver-mas-btn" onClick={() => verDetalles(servicio)}>
+            Ver Más
+          </button>
         </div>
       ))}
   </>

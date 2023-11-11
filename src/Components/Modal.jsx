@@ -15,9 +15,13 @@ const Modal = ({
     const [mensaje, setMensaje] = useState('')
 
     const [nombre, setNombre] = useState('')
+    const [apellido, setApellido] = useState('')
+    const [telefono, setTelefono] = useState('')
+    const [descripcion, setDescripcion] = useState('');
     const [precio, setPrecio] = useState('')
     const [ubicacion, setUbicacion] = useState('')
     const [categoria, setCategoria] = useState('')
+    const [imagen, setImagen] = useState('');
     const [fecha, setFecha] = useState('')
     const [id, setId] = useState('')
     const [estado, setEstado] = useState('Pendiente');
@@ -28,9 +32,13 @@ const Modal = ({
     useEffect(() => {
         if(Object.keys(servicioEditar).length > 0) {
             setNombre(servicioEditar.nombre)
+            setApellido(servicioEditar.apellido)
+            setTelefono(servicioEditar.telefono)
+            setDescripcion(servicioEditar.descripcion)
             setPrecio(servicioEditar.precio)
             setUbicacion(servicioEditar.ubicacion)
             setCategoria(servicioEditar.categoria)
+            setImagen(servicioEditar.imagen)
             setId(servicioEditar.id)
             setFecha(servicioEditar.fecha)
           }
@@ -47,7 +55,7 @@ const Modal = ({
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        if([nombre, precio, ubicacion, categoria].includes('')) {
+        if([nombre, apellido, precio, ubicacion, categoria].includes('')) {
             setMensaje('Todos los Campos son obligatorios')
 
             setTimeout(() => {
@@ -57,7 +65,9 @@ const Modal = ({
         }
 
         //FALTA TELEFONO
-        guardarServicio({nombre, precio, ubicacion, categoria, id, fecha, estado, usuarioActivoName})
+        guardarServicio({nombre, apellido, telefono, descripcion, precio, 
+            ubicacion, categoria, imagen, id, fecha, estado, usuarioActivoName
+        })
 
         
     }
@@ -79,7 +89,7 @@ const Modal = ({
         {mensaje && <Mensaje tipo="error">{mensaje}</Mensaje>}
 
         <div className='campo'>
-            <label htmlFor="nombre">Nombre Colaborador</label>
+            <label htmlFor="nombre">Nombre</label>
 
             <input 
             id="nombre"
@@ -91,12 +101,36 @@ const Modal = ({
         </div>
 
         <div className='campo'>
-            <label htmlFor="precio">Precio</label>
+            <label htmlFor="apellido">Apellidos</label>
+
+            <input 
+            id="apellido"
+            type="text"
+            placeholder="Añade el primer apellido del colaborador"
+            value={apellido}
+            onChange={ e => setApellido(e.target.value)}
+            />
+        </div>
+
+        <div className='campo'>
+            <label htmlFor="telefono">Telefono</label>
+
+            <input 
+            id="telefono"
+            type="text"
+            placeholder="Añade el telefono del colaborador"
+            value={telefono}
+            onChange={ e => setTelefono(e.target.value)}
+            />
+        </div>
+
+        <div className='campo'>
+            <label htmlFor="precio">Tarifa</label>
 
             <input 
             id="precio"
             type="number"
-            placeholder="Indica el precio por hora"
+            placeholder="Indica la tarifa por hora"
             value={precio}
             onChange={ e => setPrecio(Number(e.target.value))}
             />
@@ -129,14 +163,38 @@ const Modal = ({
                 <option value="cuido">Cuidado completo</option>
                 <option value="restaurante">Restaurante</option>
             </select>
-
-            <input style={{borderRadius: '1rem'}}
-            type="submit"
-            value={servicioEditar.nombre ? 'Guardar Cambios' : 'Agregar Servicio'}
-            />
-
            
         </div>
+
+        <div className='campo'>
+            <label htmlFor="descripcion">Descripcion</label>
+
+            <input 
+            id="descripcion"
+            type="text"
+            placeholder="Añade la descripcion del colaborador"
+            value={descripcion}
+            onChange={ e => setDescripcion(e.target.value)}
+            />
+        </div>
+
+        <div className='campo'>
+            <label htmlFor="imagen">Imagen</label>
+
+            <input 
+            id="imagen"
+            type="text"
+            placeholder="imagen"
+            value={imagen}
+            onChange={ e => setImagen(e.target.value)}
+            />
+        </div>
+
+        <input style={{borderRadius: '1rem'}}
+            type="submit"
+            value={servicioEditar.nombre ? 'Guardar Cambios' : 'Agregar Servicio'}
+
+            />
       </form>
     </div>
   )

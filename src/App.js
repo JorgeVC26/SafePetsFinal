@@ -13,6 +13,7 @@ import Informacion from "./Informacion";
 import MenuAdministrador from './Components/MenuAdministrador';
 import ListarSerivicios from './Components/Servicios/ListarServicios';
 import ListarSeriviciosPublicos from './Components/serviciosPublicos.jsx';
+import DetalleServicio from './detalleServicio/detalleServicio.jsx';
 function App() {
 
   // Verificar si ya existe un usuario de super admin en localStorage
@@ -55,6 +56,7 @@ function App() {
         <Route path="Service" element={<Service />} />
         <Route path="Historia" element={<Historia />} />
         <Route path="Informacion" element={<Informacion />} />
+        <Route path="/detalleServicio" element={<DetalleServicio />} />
 
         <Route
           path="/login"

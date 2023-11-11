@@ -1,0 +1,51 @@
+.cont__servicio {
+    /* Add styles for the container div */
+    margin: 100px 350px 100px 350px;
+    padding: 20px;
+    font-size: 1.7rem;
+    font-family: "Lato", sans-serif;
+    color: #414d5c;
+    background-color: white;
+    border: 3px solid rgb(48, 112, 175);
+    border-radius: 20px;
+  }
+  
+  .__title {
+    /* Add styles for the title div */
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .dato__s {
+    /* Add styles for the details div */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contenido__imagen {
+    /* Add styles for the container of image and info divs */
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  
+  .__imagen {
+    /* Add styles for the image div */
+    margin: 70px 0px 70px 0px;
+    padding: 50px;
+    border: 3px solid rgb(48, 112, 175);
+  }
+  
+  .__info {
+    /* Add styles for the info div */
+    margin: 50px 50px 50px 50px;
+    padding: 20px;
+    flex-grow: 1;
+  }
+  
+  .contenido__datos {
+    /* Add styles for the data div */
+    margin-top: 5px;
+  }
+
+  /* Add more styles as needed */

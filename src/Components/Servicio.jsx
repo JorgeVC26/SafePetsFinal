@@ -23,7 +23,14 @@ const diccionarioIconos = {
 
 
 const Servicio = ({servicio, setServicioEditar,eliminarServicio}) => {
-    const {categoria, nombre, precio, ubicacion, id, fecha, usuarioActivoName} = servicio
+    const {categoria, nombre, apellido, precio, ubicacion, id, fecha, usuarioActivoName} = servicio
+
+    const verDetalles = () => {
+      // Almacenar la información del servicio en localStorage
+      localStorage.setItem('detalleServicio', JSON.stringify(servicio));
+      // Redireccionar a la página de detalles
+      window.location.href = '/detalleServicio';
+    };
 
     const leadingActions = () => (
       <LeadingActions>
@@ -56,7 +63,7 @@ const Servicio = ({servicio, setServicioEditar,eliminarServicio}) => {
         alt="Icono servicio" />
         <div className='descripcion-gasto'>
             <p className='categoria'>{categoria}</p>
-            <p className='nombre-gasto'>{nombre}</p>
+            <p className='nombre-gasto'>{nombre} {apellido}</p>
             <p className='nombre-gasto'>{ubicacion}</p>
             <p className='nombre-gasto'>Creado por: {usuarioActivoName}</p>
             <p className='fecha-gasto'>
@@ -67,6 +74,10 @@ const Servicio = ({servicio, setServicioEditar,eliminarServicio}) => {
       </div>
 
       <p className='cantidad-gasto'>₡{precio}</p>
+
+      <button className="ver-mas-btn" onClick={verDetalles}>
+            Ver Más
+          </button>
     </div>
     </SwipeableListItem>
     </SwipeableList>
